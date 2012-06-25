@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# you need sox to use this script
+# also, be sure your files named "pic${SUFFIX}"
+
+SUFFIX=$1
+FILE=pic${SUFFIX}
+
+echo "Running $FILE"
+./${FILE} > ${FILE}.bmp
+
+open ${FILE}.bmp
+
